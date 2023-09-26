@@ -24,23 +24,23 @@ dotenv.config({ path: './config.env' });
 
 mongoose.set('strictQuery', false);
 // database connection with mongoose
+ //mongoose
+// .connect('mongodb://localhost/registrationlogin',{
+   //  useNewUrlParser: true,
+   //  useUnifiedTopology: true,
+// })
+// .then(() => console.log('connection successful'))
+ //.catch(err => console.log(`no connection`))
+
+
+
  mongoose
- .connect('mongodb://localhost/registrationlogin',{
-     useNewUrlParser: true,
-     useUnifiedTopology: true,
- })
- .then(() => console.log('connection successful'))
- .catch(err => console.log(`no connection`))
-
-
-
-// mongoose
- // .connect('mongodb+srv://tahminabithe47:01757112809A@electiontallywithlogin.1x4u0rl.mongodb.net/',{
-     // useNewUrlParser: true,
-     // useUnifiedTopology: true,
- // })
- // .then(() => console.log('connection successful'))
- // .catch(err => console.log(`no connection`))
+  .connect('mongodb+srv://dhakacoder2772:FRur3nmDLYyVKYHI@cluster0.gvx4end.mongodb.net/',{
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+  })
+  .then(() => console.log('connection successful'))
+  .catch(err => console.log(`no connection`))
 
 const User = require('./model/userSchema');
 
